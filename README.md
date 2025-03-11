@@ -9,12 +9,13 @@
 what these patches done to make it work:
 >libagm => libagm_c
 
-2. solve SELinux rule confliction
+2. ~~solve SELinux rule confliction~~ (No longer needed when using [Chaitanyakm's vendor](https://github.com/Chaitanyakm))
 3. Switch from EXT4 to EROFS
 4. \[for Chinese Users] Change NTP server
 5. \[for Chinese Users] Change captive portal detection URL
 6. \[for Chinese Users] Change default search engine of builtin browser
 7. AVB & DM-verity Enabled
+8. solve some of LineageOS detection (addon.d, gapps.rc)
 
 ## How to use
 
