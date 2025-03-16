@@ -10,7 +10,7 @@ index 46d856b6..d7299023 100644
 +  string_value: "2025-03-01"
  }
 
- project external/dng_sdk/
+project external/dng_sdk/
 diff --git a/source/dng_lossless_jpeg.cpp b/source/dng_lossless_jpeg.cpp
 index 9d0d01a..0cb9944 100644
 --- a/source/dng_lossless_jpeg.cpp
