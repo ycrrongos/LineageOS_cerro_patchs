@@ -2,7 +2,7 @@
 
 ## Features
 
-1. solve shared library confliction error like
+1. ~~solve shared library confliction error like~~ （No longer needed）
 
 >error: hardware/qcom-caf/sm8450/audio/agm/ipc/HwBinders/agm_ipc_service: MODULE.TARGET.SHARED_LIBRARIES.vendor.qti.hardware.AGMIPC@1.0-impl already defined by vendor/xiaomi/sm8450-common.
 
@@ -16,6 +16,15 @@ what these patches done to make it work:
 6. \[for Chinese Users] Change default search engine of builtin browser
 7. AVB & DM-verity Enabled
 8. solve some of LineageOS detection (addon.d, gapps.rc)
+9. solve fingerprint issue in A15 QPR2 [origional commit](https://github.com/ederevx/android_build_soong/commit/64f5ef1087c38dbb173cbfa126abef1c422e6451)
+10. MIUI Camera now works, related commits:
+    [64 MP crash fix](https://github.com/crdroidandroid/android_frameworks_base/commit/f4c3ffd3132789fb40e9982f3ab2351bce1a44a2)
+    [CaptureResultExtras method fix](https://github.com/crdroidandroid/android_frameworks_base/commit/90ed8a47f1a65b0e80f8537a11eb3e44801964e4)
+    [StreamConfigurationMap fix Part1](https://github.com/crdroidandroid/android_frameworks_base/commit/d79ce371f490fff6f5f754512414ad6ff4833a7e)
+    [StreamConfigurationMap fix Part2](https://github.com/crdroidandroid/android_frameworks_base/commit/d8e22dd80f4f0c5f05a07094616a7af8ddecea6d)
+    [Fix broken auto brightness](https://github.com/crdroidandroid/android_frameworks_base/commit/60ef8f6b7a578fad450c57a60c131a349b151644)
+    [Add prop persist.sys.cam.skip_detach_image support](https://github.com/crdroidandroid/android_frameworks_base/commit/ba7d3b9347e52e0a5679dbf62e210e63dcf6bfa0)
+    [Add onBufferDetached() needed by miui cam](https://github.com/crdroidandroid/android_frameworks_native/commit/0426f08afb27de79a12d424d780c9a2c0a346cec)
 
 ## How to use
 
@@ -54,3 +63,8 @@ git clone --depth=1 https://gitlab.com/MindTheGapps/vendor_gapps vendor/gapps
 ```
 
 Enjoy!
+
+CREDIT:
+(Chaitanyakm)[https://github.com/Chaitanyakm]: Provider of MIUI Camera blob, Maintaincer of CrDroid Offical for marble. He teaches me lot about basic solution searching
+(ArianK16a)[https://github.com/ArianK16a]: Maintaincer of marble device tree, told me the solution when I met difficulty
+(Project CrDroid)[https://github.com/crdroidandroid/]: These devs offered the solutions for new coming issues of Marble device, respect their hard work!
