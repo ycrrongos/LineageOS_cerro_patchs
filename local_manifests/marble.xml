@@ -3,8 +3,8 @@
   <!-- NOTE: Do not forget to use clone-depth=1. We only need shallow copies since this is discarded immediately after the build -->
 
   <!-- Device trees -->
-  <project name="Chaitanyakm/device_xiaomi_marble" path="device/xiaomi/marble" remote="github" revision="fifteen" clone-depth="1" />
+  <project name="cupid-development/android_device_xiaomi_marble" path="device/xiaomi/marble" remote="github" revision="lineage-22.2" clone-depth="1" />
 
   <!-- Vendor -->
-  <project name="Chaitanyakm/vendor_xiaomi_marble" path="vendor/xiaomi/marble" remote="github" revision="fifteen" clone-depth="1" />
+  <project name="cupid-development/proprietary_vendor_xiaomi_marble" path="vendor/xiaomi/marble" remote="mainlining" revision="lineage-22.2" clone-depth="1" />
 </manifest>
