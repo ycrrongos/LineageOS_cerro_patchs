@@ -1,5 +1,13 @@
 # patches_for_build_marble_AOSP_like_ROM
 
+## CREDIT
+
+(Chaitanyakm)[https://github.com/Chaitanyakm]: Provider of MIUI Camera blob, Maintaincer of CrDroid Offical for marble. He teaches me lot about basic solution searching, you are the best buddy!
+
+(ArianK16a)[https://github.com/ArianK16a]: Maintaincer of marble device tree, told me the solution when I met difficulty
+
+(Project CrDroid)[https://github.com/crdroidandroid/]: These devs offered the solutions for new coming issues of Marble device, respect their hard work!
+
 ## Features
 
 1. ~~solve shared library confliction error like~~ （No longer needed）
@@ -64,7 +72,3 @@ git clone --depth=1 https://gitlab.com/MindTheGapps/vendor_gapps vendor/gapps
 
 Enjoy!
 
-CREDIT:
-(Chaitanyakm)[https://github.com/Chaitanyakm]: Provider of MIUI Camera blob, Maintaincer of CrDroid Offical for marble. He teaches me lot about basic solution searching
-(ArianK16a)[https://github.com/ArianK16a]: Maintaincer of marble device tree, told me the solution when I met difficulty
-(Project CrDroid)[https://github.com/crdroidandroid/]: These devs offered the solutions for new coming issues of Marble device, respect their hard work!
