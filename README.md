@@ -2,11 +2,11 @@
 
 ## CREDIT
 
-(Chaitanyakm)[https://github.com/Chaitanyakm]: Provider of MIUI Camera blob, Maintaincer of CrDroid Offical for marble. He teaches me lot about basic solution searching, you are the best buddy!
+[Chaitanyakm](https://github.com/Chaitanyakm): Provider of MIUI Camera blob, Maintaincer of CrDroid Offical for marble. He teaches me lot about basic solution searching, you are the best buddy!
 
-(ArianK16a)[https://github.com/ArianK16a]: Maintaincer of marble device tree, told me the solution when I met difficulty
+[ArianK16a](https://github.com/ArianK16a): Maintaincer of marble device tree, told me the solution when I met difficulty
 
-(Project CrDroid)[https://github.com/crdroidandroid/]: These devs offered the solutions for new coming issues of Marble device, respect their hard work!
+[Project CrDroid](https://github.com/crdroidandroid): These devs offered the solutions for new coming issues of Marble device, respect their hard work!
 
 ## Features
 
