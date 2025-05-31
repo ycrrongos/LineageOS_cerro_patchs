@@ -17,7 +17,7 @@
 what these patches done to make it work:
 >libagm => libagm_c
 
-2. ~~solve SELinux rule confliction~~ (No longer needed when using [Chaitanyakm's vendor](https://github.com/Chaitanyakm))
+2. solve SELinux rule confliction
 3. Switch from EXT4 to EROFS
 4. \[for Chinese Users] Change NTP server
 5. \[for Chinese Users] Change captive portal detection URL
@@ -32,7 +32,9 @@ what these patches done to make it work:
     [StreamConfigurationMap fix Part2](https://github.com/crdroidandroid/android_frameworks_base/commit/d8e22dd80f4f0c5f05a07094616a7af8ddecea6d)
     [Fix broken auto brightness](https://github.com/crdroidandroid/android_frameworks_base/commit/60ef8f6b7a578fad450c57a60c131a349b151644)
     [Add prop persist.sys.cam.skip_detach_image support](https://github.com/crdroidandroid/android_frameworks_base/commit/ba7d3b9347e52e0a5679dbf62e210e63dcf6bfa0)
-    [Add onBufferDetached() needed by miui cam](https://github.com/crdroidandroid/android_frameworks_native/commit/0426f08afb27de79a12d424d780c9a2c0a346cec)
+    [Add onBufferDetached() needed by miui cam](https://github.com/crdroidandroid/android_frameworks_native/commit/0426f08afb27de79a12d424d780c9a2c0a346cec) 
+
+However LOS official for marble is already roll out so MIUI Cam fix for LOS is merged so manual patch is no longer needed
 
 ## How to use
 
@@ -44,7 +46,7 @@ First of all, use device and vendor from [Chaitanyakm](https://github.com/Chaita
 git clone --depth=1 https://github.com/WeiguangTWK/patches_for_build_marble_AOSP .
 ```
 
-*1. (if you need Chaitanyakm's device&vendor&miui-camera) copy folder local_mainfest into .repo then sync
+*1. copy folder local_mainfest into .repo then sync
 
 ```
 repo sync -c
