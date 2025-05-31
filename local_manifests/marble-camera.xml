@@ -6,7 +6,7 @@
 
   <!-- MIUI Camera for marble -->
   <project name="Chaitanyakm/device_xiaomi_miuicamera-marble" path="device/xiaomi/miuicamera-marble" remote="github" revision="fourteen" clone-depth="1" />
-  <project name="Chaitanyakm/vendor_xiaomi_miuicamera-marble" path="vendor/xiaomi/miuicamera-marble" remote="gitlab" revision="fourteen" clone-depth="1" />
+  <project name="Chaitanyakm/vendor_xiaomi_miuicamera-marble" path="vendor/xiaomi/miuicamera-marble" remote="gitlab" revision="fifteen" clone-depth="1" />
 
 
 
