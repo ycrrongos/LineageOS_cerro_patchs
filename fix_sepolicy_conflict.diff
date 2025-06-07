@@ -1,9 +1,0 @@
-
-project device/lineage/sepolicy/
-diff --git a/common/vendor/device.te b/common/vendor/device.te
-index d580073..5bbe0c2 100644
---- a/common/vendor/device.te
-+++ b/common/vendor/device.te
-@@ -1 +1 @@
--type lirc_device, dev_type;
-+# type lirc_device, dev_type;
