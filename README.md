@@ -8,6 +8,16 @@
 
 [Project CrDroid](https://github.com/crdroidandroid): These devs offered the solutions for new coming issues of Marble device, respect their hard work!
 
+
+
+## Special Comments
+
+Having more knowledge doesn't offer you chance to look down on the others but help them have a better life
+
+——2019, opening ceremony of The University of Tokyo
+
+
+
 ## Features
 
 1. ~~solve shared library confliction error like~~ （No longer needed）
@@ -17,7 +27,7 @@
 what these patches done to make it work:
 >libagm => libagm_c
 
-2. solve SELinux rule confliction
+2. ~~solve SELinux rule confliction~~ (Not needed since LineageOS Official already check these kind of problem before merge)
 3. Switch from EXT4 to EROFS
 4. \[for Chinese Users] Change NTP server
 5. \[for Chinese Users] Change captive portal detection URL
@@ -38,7 +48,7 @@ However LOS official for marble is already roll out so MIUI Cam fix for LOS is m
 
 ## How to use
 
-First of all, use device and vendor from [Chaitanyakm](https://github.com/Chaitanyakm), it is newer and better
+First of all, use device and vendor from LineageOS Official, it is stable and easy to pass the compile process. But also you can try Device profile from [Chaitanyakm](https://github.com/Chaitanyakm), from him you can get bleeding edge changes for marble
 
 1. clone this repo under your LineageOS source root
 
