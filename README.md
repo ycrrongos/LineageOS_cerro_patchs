@@ -24,7 +24,7 @@ Having more knowledge doesn't offer you chance to look down on the others but he
 
 1. Switch SCUDO to faster Mimalloc
 
-2. Face Unlock (Credit Paranoid team)
+2. Face Unlock (Credit Paranoid team and the [guy who bring it to LOS](https://review.lineageos.org/q/topic:%2223fu%22))
 3. Switch from EXT4 to EROFS
 4. \[for Chinese Users] Change NTP server
 5. \[for Chinese Users] Change captive portal detection URL
