@@ -8,6 +8,8 @@
 
 [Project CrDroid](https://github.com/crdroidandroid): These devs offered the solutions for new coming issues of Marble device, respect their hard work!
 
+Team Paranoid & VoltageOS: Paranoid offer their way of face recognition and VoltageOS pack the source code of **Paranoid Sense** together with its close-source lib, making it more easy to integrate it into our own build
+
 
 
 ## Special Comments
