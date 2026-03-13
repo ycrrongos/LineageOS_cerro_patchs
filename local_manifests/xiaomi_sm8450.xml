@@ -3,22 +3,19 @@
   <!-- NOTE: Do not forget to use clone-depth=1. We only need shallow copies since this is discarded immediately after the build -->
 
   <!-- Remotes -->
-  <remote fetch="https://git.mainlining.org" name="mainlining" revision="lineage-22.1" clone-depth="1" />
+  <remote fetch="http://127.0.0.1:4567" name="mainlining" revision="lineage-23.2" clone-depth="1" />
 
   <!-- Device trees -->
-  <project name="cupid-development/android_device_xiaomi_sm8450-common" path="device/xiaomi/sm8450-common" remote="github" revision="lineage-22.2" clone-depth="1" />
+  <project name="LineageOS/android_device_xiaomi_sm8450-common" path="device/xiaomi/sm8450-common" remote="github" revision="lineage-23.2" clone-depth="1" />
 
   <!-- Xiaomi common hardware -->
-  <project path="hardware/xiaomi" remote="github" name="LineageOS/android_hardware_xiaomi" revision="lineage-22.2" clone-depth="1" />
+  <project path="hardware/xiaomi" remote="github" name="LineageOS/android_hardware_xiaomi" revision="lineage-23.2" clone-depth="1" />
 
   <!-- Kernel -->
-  <project name="cupid-development/android_kernel_xiaomi_sm8450" path="kernel/xiaomi/sm8450" remote="github" revision="lineage-22.2" clone-depth="1" />
-  <project name="cupid-development/android_kernel_xiaomi_sm8450-devicetrees" path="kernel/xiaomi/sm8450-devicetrees" remote="github" revision="lineage-22.2" clone-depth="1" />
-  <project name="cupid-development/android_kernel_xiaomi_sm8450-modules" path="kernel/xiaomi/sm8450-modules" remote="github" revision="lineage-22.2" clone-depth="1" />
+  <project name="LineageOS/android_kernel_xiaomi_sm8450" path="kernel/xiaomi/sm8450" remote="github" revision="lineage-23.2" clone-depth="1" />
+  <project name="LineageOS/android_kernel_xiaomi_sm8450-devicetrees" path="kernel/xiaomi/sm8450-devicetrees" remote="github" revision="lineage-23.2" clone-depth="1" />
+  <project name="LineageOS/android_kernel_xiaomi_sm8450-modules" path="kernel/xiaomi/sm8450-modules" remote="github" revision="lineage-23.2" clone-depth="1" />
 
   <!-- Vendor -->
-  <project name="cupid-development/proprietary_vendor_xiaomi_sm8450-common" path="vendor/xiaomi/sm8450-common" remote="mainlining" revision="lineage-22.2" clone-depth="1" />
-
-  <!-- Extra vendor for OTA URLs -->
-  <project path="vendor/extra" remote="github" name="cupid-development/android_vendor_extra" revision="lineage-22.2" clone-depth="1" />
+  <project name="TheMuppets/proprietary_vendor_xiaomi_sm8450-common" path="vendor/xiaomi/sm8450-common" remote="github" revision="lineage-23.2" clone-depth="1" />
 </manifest>
