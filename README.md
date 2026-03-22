@@ -27,7 +27,6 @@ Having more knowledge doesn't offer you chance to look down on the others but he
 ## Features
 
 1. Switch SCUDO to faster Mimalloc
-
 2. Face Unlock (Credit Paranoid team and the [guy who bring it to LOS](https://review.lineageos.org/q/topic:%2223fu%22))
 3. Switch from EXT4 to EROFS
 4. \[for Chinese Users] Change NTP server
@@ -45,6 +44,7 @@ Having more knowledge doesn't offer you chance to look down on the others but he
     [Fix broken auto brightness](https://github.com/crdroidandroid/android_frameworks_base/commit/60ef8f6b7a578fad450c57a60c131a349b151644)
     [Add prop persist.sys.cam.skip_detach_image support](https://github.com/crdroidandroid/android_frameworks_base/commit/ba7d3b9347e52e0a5679dbf62e210e63dcf6bfa0)
     [Add onBufferDetached() needed by miui cam](https://github.com/crdroidandroid/android_frameworks_native/commit/0426f08afb27de79a12d424d780c9a2c0a346cec)
+12. Eliminate all known LineageOS detection point & TEE Simulator integration
 
 However LOS official for marble is already roll out so MIUI Cam fix for LOS is merged so manual patch is no longer needed
 
