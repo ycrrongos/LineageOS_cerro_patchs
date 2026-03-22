@@ -8,6 +8,10 @@
 
 [Project CrDroid](https://github.com/crdroidandroid): These devs offered the solutions for new coming issues of Marble device, respect their hard work!
 
+[HMA-OSS](https://github.com/frknkrc44/HMA-OSS): Offered the way of blocking LineageOS Apps detection
+
+[TEESimulator](https://github.com/JingMatrix/TEESimulator): OSS version of TrickyStore-like TEE emulator allowing me to integrate similiar feat into LineageOS
+
 Team Paranoid & VoltageOS: Paranoid offer their way of face recognition and VoltageOS pack the source code of **Paranoid Sense** together with its close-source lib, making it more easy to integrate it into our own build
 
 
