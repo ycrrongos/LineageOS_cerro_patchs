@@ -33,10 +33,9 @@ Having more knowledge doesn't offer you chance to look down on the others but he
 5. \[for Chinese Users] Change captive portal detection URL
 6. \[for Chinese Users] Change default search engine of builtin browser
 7. AVB & DM-verity Enabled
-8. solve some of LineageOS detection (addon.d, gapps.rc)
-9. Restore GKI compatibility (Credit Pzqqt)
-10. ~~solve fingerprint issue in A15 QPR2~~ [origional commit](https://github.com/ederevx/android_build_soong/commit/64f5ef1087c38dbb173cbfa126abef1c422e6451)
-11. ~~MIUI Camera now works, related commits:~~
+8. Restore GKI compatibility (Credit Pzqqt)
+9. ~~solve fingerprint issue in A15 QPR2~~ [origional commit](https://github.com/ederevx/android_build_soong/commit/64f5ef1087c38dbb173cbfa126abef1c422e6451)
+10. ~~MIUI Camera now works, related commits:~~
     [64 MP crash fix](https://github.com/crdroidandroid/android_frameworks_base/commit/f4c3ffd3132789fb40e9982f3ab2351bce1a44a2)
     [CaptureResultExtras method fix](https://github.com/crdroidandroid/android_frameworks_base/commit/90ed8a47f1a65b0e80f8537a11eb3e44801964e4)
     [StreamConfigurationMap fix Part1](https://github.com/crdroidandroid/android_frameworks_base/commit/d79ce371f490fff6f5f754512414ad6ff4833a7e)
@@ -44,9 +43,11 @@ Having more knowledge doesn't offer you chance to look down on the others but he
     [Fix broken auto brightness](https://github.com/crdroidandroid/android_frameworks_base/commit/60ef8f6b7a578fad450c57a60c131a349b151644)
     [Add prop persist.sys.cam.skip_detach_image support](https://github.com/crdroidandroid/android_frameworks_base/commit/ba7d3b9347e52e0a5679dbf62e210e63dcf6bfa0)
     [Add onBufferDetached() needed by miui cam](https://github.com/crdroidandroid/android_frameworks_native/commit/0426f08afb27de79a12d424d780c9a2c0a346cec)
-12. Eliminate all known LineageOS detection point & TEE Simulator integration
+11. Eliminate all known LineageOS detection point & TEE Simulator integration
+12. [Added a tile for switching data SIM](https://github.com/crdroidandroid/android_frameworks_base/commit/9a44e0de93429e8e661b024488227f1e64ea39dc)
+13. Fix issues: missing sys.user.0.ce_avaliable (known as Storage issue), SystemUI crash on clipboard overflow, BLASTBufferQueue incompatiable issue
 
-However LOS official for marble is already roll out so MIUI Cam fix for LOS is merged so manual patch is no longer needed
+However LOS official for marble is already roll out and MIUI Cam fix for LOS is merged so manual patch is no longer needed
 
 ## How to use
 
