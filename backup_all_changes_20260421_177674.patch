@@ -8399,12 +8399,6 @@ index 000000000..9faeb6698
 +
 
 project frameworks/base/
-diff --git a/9a44e0de93429e8e661b024488227f1e64ea39dc.patch:Zone.Identifier b/9a44e0de93429e8e661b024488227f1e64ea39dc.patch:Zone.Identifier
-new file mode 100644
-index 000000000..d6c1ec682
-Binary files /dev/null and b/9a44e0de93429e8e661b024488227f1e64ea39dc.patch:Zone.Identifier differ
-
-project frameworks/base/
 diff --git a/packages/SystemUI/res/drawable/face_not_verified.xml b/packages/SystemUI/res/drawable/face_not_verified.xml
 new file mode 100644
 index 000000000..03b0566d6
@@ -12858,12 +12852,6 @@ index 0000000..62bc90b
 +}
 
 project packages/apps/Settings/
-diff --git a/ed6d415.diff:Zone.Identifier b/ed6d415.diff:Zone.Identifier
-new file mode 100644
-index 0000000..d6c1ec6
-Binary files /dev/null and b/ed6d415.diff:Zone.Identifier differ
-
-project packages/apps/Settings/
 diff --git a/res/drawable/face_enroll_check.xml b/res/drawable/face_enroll_check.xml
 new file mode 100644
 index 0000000..86edad0
@@ -15076,10 +15064,3 @@ index 0000000..dcdc818
 +     <Include href="media_codecs_c2_audio.xml" />
 +     <Settings>
 +         <Setting name="max-video-encoder-input-buffers" value="11" />
-
-project vendor/xiaomi/sm8450-common/
-diff --git a/0003-vendor_xiaomi_sm8450-common-5036c4d5.patch:Zone.Identifier b/0003-vendor_xiaomi_sm8450-common-5036c4d5.patch:Zone.Identifier
-new file mode 100644
-index 0000000..d6c1ec6
-Binary files /dev/null and b/0003-vendor_xiaomi_sm8450-common-5036c4d5.patch:Zone.Identifier differ
-
