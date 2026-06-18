@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lineage_visibility_block_title">Block ArtistOS Apps detection</string>
+    <string name="lineage_visibility_block_summary">Hide ArtistOS apps from this app at runtime</string>
+    <string name="lineage_visibility_excluded_apps_title">Exclude apps from LineageOS package hiding</string>
+    <string name="lineage_visibility_excluded_apps_summary">Allow selected third-party apps to detect LineageOS packages. Enable this for modding tools that require ROM detection.</string>
+    <string name="lineage_visibility_excluded_apps_category">Third-party apps</string>
+    <string name="lineage_visibility_excluded_app_summary">Allow detecting LineageOS packages</string>
+</resources>

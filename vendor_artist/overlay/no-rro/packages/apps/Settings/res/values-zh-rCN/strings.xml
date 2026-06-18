@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lineage_visibility_block_title">阻止检测 ArtistOS 应用</string>
+    <string name="lineage_visibility_block_summary">在运行时向此应用隐藏 ArtistOS 应用</string>
+    <string name="lineage_visibility_excluded_apps_title">排除隐藏 LineageOS 包名的应用</string>
+    <string name="lineage_visibility_excluded_apps_summary">允许所选第三方应用检测 LineageOS 包名。玩机类工具若无法识别系统，可在此开启。</string>
+    <string name="lineage_visibility_excluded_apps_category">第三方应用</string>
+    <string name="lineage_visibility_excluded_app_summary">允许检测 LineageOS 包名</string>
+</resources>

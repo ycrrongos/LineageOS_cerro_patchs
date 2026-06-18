@@ -1,102 +1,70 @@
-# patches_for_build_marble_AOSP_like_ROM
+# LineageOS cerro (ArtistOS) patches
 
-## CREDIT
+针对努比亚 Z60 Ultra (`cerro`) 的 LineageOS 23.2 / ArtistOS 定制补丁集合。
 
-[Chaitanyakm](https://github.com/Chaitanyakm): Provider of MIUI Camera blob, Maintaincer of CrDroid Offical for marble. He teaches me lot about basic solution searching, you are the best buddy!
+目标仓库：[ycrrongos/LineageOS_cerro_patchs](https://github.com/ycrrongos/LineageOS_cerro_patchs)
 
-[ArianK16a](https://github.com/ArianK16a): Maintaincer of marble device tree, told me the solution when I met difficulty
+## 功能概览
 
-[Project CrDroid](https://github.com/crdroidandroid): These devs offered the solutions for new coming issues of Marble device, respect their hard work!
+- **ArtistOS 品牌**：`vendor/artist` overlay + 产品配置
+- **人脸解锁**：FaceUnlock 应用 + SystemUI / frameworks 集成
+- **数据卡切换 Tile**（QS）
+- **TEE 软模拟 / keystore2** 相关改动
+- **LineageSettings 启动容错**（避免 SystemUI RescueParty）
+- **adb 公钥预授权**（userdebug/eng）
+- **区域/体验类**：NTP、Updater、Dolby、EROFS、GKI、mimalloc 等（见 `split_patches/`）
+- **平台稳定性修复**（clipboard、BLASTBufferQueue 等）
 
-[HMA-OSS](https://github.com/frknkrc44/HMA-OSS): Offered the way of blocking LineageOS Apps detection
+> **注意**：全局隐藏 Lineage 应用 / bionic 隐藏 `ro.lineage.*` 的「加强隐藏」方案已确认会导致 SystemUI 崩溃，**不在当前补丁中**。请勿应用 `split_patches/04_*` 里与 `LineageVisibilityHelper` / `artist_prop_hide` 相关的旧内容；以 `backup_all_changes_20260605.patch` 为准。
 
-[TEESimulator](https://github.com/JingMatrix/TEESimulator): OSS version of TrickyStore-like TEE emulator allowing me to integrate similiar feat into LineageOS
+## 使用方法
 
-Team Paranoid & VoltageOS: Paranoid offer their way of face recognition and VoltageOS pack the source code of **Paranoid Sense** together with its close-source lib, making it more easy to integrate it into our own build
+在 LineageOS 源码根目录：
 
+```bash
+git clone https://github.com/ycrrongos/LineageOS_cerro_patchs vendor/artist/patches
+# 或 clone 到任意目录后复制
 
+cd vendor/artist/patches   # 或你的 clone 路径
+chmod +x patch_diff.sh apply_addon_files.sh
 
-## Special Comments
+# 1. 应用 repo diff（修改已有文件）
+./patch_diff.sh backup_all_changes_20260605.patch
 
-Having more knowledge doesn't offer you chance to look down on the others but help them have a better life
+# 2. 复制新增文件（FaceUnlock、人脸 UI、vendor/artist 等）
+./apply_addon_files.sh /path/to/LineageOS_cerro
 
-——2019, opening ceremony of The University of Tokyo
-
-
-
-## Features
-
-1. Switch SCUDO to faster Mimalloc
-2. Face Unlock (Credit Paranoid team and the [guy who bring it to LOS](https://review.lineageos.org/q/topic:%2223fu%22))
-3. Switch from EXT4 to EROFS
-4. \[for Chinese Users] Change NTP server
-5. \[for Chinese Users] Change captive portal detection URL
-6. \[for Chinese Users] Change default search engine of builtin browser
-7. AVB & DM-verity Enabled
-8. Restore GKI compatibility (Credit Pzqqt)
-9. ~~solve fingerprint issue in A15 QPR2~~ [origional commit](https://github.com/ederevx/android_build_soong/commit/64f5ef1087c38dbb173cbfa126abef1c422e6451)
-10. ~~MIUI Camera now works, related commits:~~
-    [64 MP crash fix](https://github.com/crdroidandroid/android_frameworks_base/commit/f4c3ffd3132789fb40e9982f3ab2351bce1a44a2)
-    [CaptureResultExtras method fix](https://github.com/crdroidandroid/android_frameworks_base/commit/90ed8a47f1a65b0e80f8537a11eb3e44801964e4)
-    [StreamConfigurationMap fix Part1](https://github.com/crdroidandroid/android_frameworks_base/commit/d79ce371f490fff6f5f754512414ad6ff4833a7e)
-    [StreamConfigurationMap fix Part2](https://github.com/crdroidandroid/android_frameworks_base/commit/d8e22dd80f4f0c5f05a07094616a7af8ddecea6d)
-    [Fix broken auto brightness](https://github.com/crdroidandroid/android_frameworks_base/commit/60ef8f6b7a578fad450c57a60c131a349b151644)
-    [Add prop persist.sys.cam.skip_detach_image support](https://github.com/crdroidandroid/android_frameworks_base/commit/ba7d3b9347e52e0a5679dbf62e210e63dcf6bfa0)
-    [Add onBufferDetached() needed by miui cam](https://github.com/crdroidandroid/android_frameworks_native/commit/0426f08afb27de79a12d424d780c9a2c0a346cec)
-11. Eliminate all known LineageOS detection point & TEE Simulator integration
-12. [Added a tile for switching data SIM](https://github.com/crdroidandroid/android_frameworks_base/commit/9a44e0de93429e8e661b024488227f1e64ea39dc)
-13. Fix issues: missing sys.user.0.ce_avaliable (known as Storage issue), SystemUI crash on clipboard overflow, BLASTBufferQueue incompatiable issue
-
-However LOS official for marble is already roll out and MIUI Cam fix for LOS is merged so manual patch is no longer needed
-
-## How to use
-
-First of all, use device and vendor from LineageOS Official, it is stable and easy to pass the compile process. But also you can try Device profile from [Chaitanyakm](https://github.com/Chaitanyakm), from him you can get bleeding edge changes for marble
-
-1. clone this repo under your LineageOS source root
-
-```
-git clone --depth=1 https://github.com/WeiguangTWK/patches_for_build_marble_AOSP .
+# 3. 可选：按主题应用 split_patches（需自行核对是否与 backup 重复）
+# ./patch_diff.sh split_patches/01_tee_soft_emulate.patch
 ```
 
-*1. copy folder local_mainfest into .repo then sync
+`device/nubia/cerro/lineage_cerro.mk` 需包含：
 
-```
-repo sync -c
-```
-
-**1. also to build with miui camera, you need to extract blob from your phone first
-
-```
-cd device/xiaomi/miuicamera-marble
-./extract-files.py
+```makefile
+$(call inherit-product, vendor/artist/config/artist.mk)
 ```
 
-2. apply them according to your need
+（已包含在 `addon_files/device/nubia/cerro/lineage_cerro.mk`）
 
-```
-chmod +x ./patch_diff.sh
-patch_diff.sh <diff file>
-```
+## 目录说明
 
-*3. To enable GMS, ont only you need to patch Enable GMS patch but also need to clone Mind The Gapps repo
+| 路径 | 说明 |
+|------|------|
+| `backup_all_changes_20260605.patch` | 当前完整 `repo diff`（2026-06-05 编译成功版本） |
+| `addon_files/` | `repo diff` 不包含的新增文件 |
+| `vendor_artist/` | `vendor/artist/config` 与 overlay |
+| `split_patches/` | 按主题拆分的历史补丁（部分可能过时） |
+| `local_manifests/` | 额外 repo manifest（mimalloc 等） |
+| `patch_diff.sh` | 应用 `repo diff` 格式补丁 |
 
-```
-git clone --depth=1 https://gitlab.com/MindTheGapps/vendor_gapps vendor/gapps
-```
+## 编译
 
-*4. Face Unlock
-
-To set it up, you not only need to apply face unlock patch but also clone two more repos:
-
-```
-cd packages\apps
-git clone --depth=1 https://gitlab.com/voltageos/packages_apps_paranoidsense -b 16.2 ParanoidSense
-cd ../../vendor
-git clone --depth=1 https://github.com/AOSPA/android_vendor_aospa -b beryl aospa
-cp -r aospa/interfaces/biometrics lineage/interfaces
-rm -rf aospa
+```bash
+source build/envsetup.sh
+breakfast cerro
+brunch cerro
 ```
 
-Enjoy!
+## 致谢
 
+基于 [WeiguangTWK/patches_for_build_marble_AOSP](https://github.com/WeiguangTWK/patches_for_build_marble_AOSP) 结构整理；人脸解锁参考 Paranoid Sense / InfinityX；TEE 相关参考 TEESimulator 等社区方案。

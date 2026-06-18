@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lineageparts_title">ArtistOS 设置</string>
+    <string name="anonymous_statistics_title">ArtistOS 统计</string>
+    <string name="anonymous_statistics_summary">开启匿名统计报告以便帮助 ArtistOS 未来向更好的方向发展</string>
+</resources>
