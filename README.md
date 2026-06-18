@@ -56,6 +56,8 @@ $(call inherit-product, vendor/artist/config/artist.mk)
 | `split_patches/` | 按主题拆分的历史补丁（部分可能过时） |
 | `local_manifests/` | 额外 repo manifest（mimalloc 等） |
 | `patch_diff.sh` | 应用 `repo diff` 格式补丁 |
+| `docs/KNOWLEDGE_BASE.md` | **知识库**：功能、根因、踩坑、刷机验证 |
+| `docs/SESSION_LOG_20260605.md` | **会话记录**：时间线与决策摘要 |
 
 ## 编译
 
